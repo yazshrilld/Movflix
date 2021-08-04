@@ -150,6 +150,8 @@ flex: 6;
     padding-top: 2em;
     position: relative;
     align-items: center;
+    transform: translateX(0);
+    transition: all 1s ease-in-out;
 }
 .movie-lists-items {
     position: relative;
@@ -209,4 +211,26 @@ flex: 6;
     right: 0;
     cursor: pointer;
     opacity: 0.3;
+}
+.content {
+    background-color: #fff;
+}
+.movie-list-release{
+    color: black;
+}
+.movie-desc, .movie-title-span{
+    color: black;
+}
+.navbar-container, .sidebar, .sidebar-icon {
+    background-color: #fff;
+    color: black;
+}
+.toggle {
+    background-color: black;
+}
+.toggle-ball {
+    background-color: white;
+}
+.toggle-icon {
+    color: pink;
 }
