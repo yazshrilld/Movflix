@@ -13,11 +13,12 @@
         console.log(itemNumber);
         let clickingCount = 0;
         arrow.addEventListener("click", ()=> {
+            // const ratio = Math.floor(window.innerWidth/270);
             clickingCount++;
-            if( itemNumber - (3 + clickingCount) >= 0 ) {
+            if( itemNumber - (4 + clickingCount) >= 0 ) {
                  // console.log("you clicked the :" + i + " row arrow" );   THIS CHECKS THE ARROW THAT WAS CLICKED
                 movieList_class[i].style.transform = `translateX(${
-                movieList_class[i].computedStyleMap().get("transform")[0].x.value-300
+                movieList_class[i].computedStyleMap().get("transform")[0].x.value-370
             }px)`;
             }
             else {
@@ -27,3 +28,13 @@
         })
         //Next is to find initial position of div after every click
     }) 
+
+    const ball  = document.querySelector(".toggle-ball");
+    const items = document.querySelectorAll(".content, .movie-list-release, .movie-desc, .movie-title-span, .navbar-container, .sidebar, .sidebar-icon, .toggle, .arrow");
+
+    ball.addEventListener("click", ()=> {
+        items.forEach(myIndividualItem => {
+            myIndividualItem.classList.toggle("active");
+        }); 
+        ball.classList.toggle("active");
+    });
